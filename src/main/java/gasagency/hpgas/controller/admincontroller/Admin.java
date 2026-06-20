@@ -1,3 +1,5 @@
+//Entity Class for Admin
+
 package gasagency.hpgas.controller.admincontroller;
 
 import gasagency.hpgas.dto.adminDto.AdminDto;
