@@ -9,5 +9,4 @@ public class HpGasApplication {
     public static void main(String[] args) {
         SpringApplication.run(HpGasApplication.class, args);
     }
-
 }

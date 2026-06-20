@@ -26,9 +26,7 @@ public class Admin {
     }
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody LoginDto loginDto){
-
         String token = adminServerimpl.loginAdmin(loginDto);
-
         return ResponseEntity.ok(token);
     }
 }
