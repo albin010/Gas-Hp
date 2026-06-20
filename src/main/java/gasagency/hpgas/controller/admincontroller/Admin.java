@@ -1,4 +1,3 @@
-//Entity Class for Admin
 
 package gasagency.hpgas.controller.admincontroller;
 
