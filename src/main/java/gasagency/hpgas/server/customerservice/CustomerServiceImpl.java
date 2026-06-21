@@ -38,7 +38,7 @@ public class CustomerServiceImpl implements CustomerService {
         customer.setCity(dto.getCity());
         customer.setCountry(dto.getCountry());
         customer.setZipCode(dto.getZipCode());
-
+        customer.setConnection(dto.getConnection());
         // ✅ Encrypt password
         customer.setPassword(encoder.encode(dto.getPassword()));
 

@@ -9,7 +9,7 @@ public class CustomerDto {
     private String customerName;
     private String password;
     private String phone;
-
+    private int connection;
     private String address;
     private String city;
     private String country;

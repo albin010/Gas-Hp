@@ -27,6 +27,7 @@ public class CustomerEntity {
     private String city;
     private String country;
     private String zipCode;
+    private int connection;
 
     @Enumerated(EnumType.STRING)
     private Status status;
