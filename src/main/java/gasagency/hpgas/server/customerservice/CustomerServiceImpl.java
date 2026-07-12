@@ -10,6 +10,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 public class CustomerServiceImpl implements CustomerService {
@@ -53,4 +54,24 @@ public class CustomerServiceImpl implements CustomerService {
 
         return customerRepository.save(customer); // ✅ FIX
     }
+
+    // In CustomerServiceImpl.java
+    @Override
+    public List<CustomerSummary> getCustomersForAgent(Long agentId) {
+        return customerRepository.findSummariesByAgentId(agentId);
+    }
+
+    @Override
+    public List<CustomerSummary> searchCustomers(
+            String keyword,
+            Long agentId
+    ) {
+
+        return customerRepository.searchCustomers(
+                agentId,
+                keyword
+        );
+
+    }
+
 }

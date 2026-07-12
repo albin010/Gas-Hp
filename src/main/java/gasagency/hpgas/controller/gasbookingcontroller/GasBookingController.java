@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
     @RestController
-    @RequestMapping("/api/bookings")
+    @RequestMapping("/bookings")
     @RequiredArgsConstructor
     public class GasBookingController {
 
         private final GasBookingService bookingService;
 
-        @PostMapping
+        @PostMapping("/add")
         public GasBookingDto createBooking(@RequestBody GasBookingDto dto) {
             return bookingService.createBooking(dto);
         }
